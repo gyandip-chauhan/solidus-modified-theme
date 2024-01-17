@@ -1,0 +1,27 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  user: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASS'] %>
+
+development:
+  <<: *default
+  database: solidus-modified-theme-development
+  host: localhost
+  port: 5432
+  username: gyandip
+  password: gyandip
+  
+test:
+  <<: *default
+  database: solidus-modified-theme-test
+  host: localhost
+  port: 5432
+  username: gyandip
+  password: gyandip
+  
+production:
+  <<: *default
+  database: solidus-modified-theme-production
+  username: gyandip
+  password: <%= ENV["PROD_DATABASE_PASSWORD"] %>

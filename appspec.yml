@@ -1,0 +1,24 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/solidus-modified-theme_auto
+permissions:
+  - object: /var/www/html/solidus-modified-theme_auto
+    owner: root
+    group: root
+    mode: 775
+    pattern: "*"
+hooks:
+  AfterInstall:
+    - location: scripts/set_permissions.sh   
+      runas: root
+      timeout: 300
+    - location: scripts/dependencies_install.sh
+      runas: root
+      timeout: 300
+  ApplicationStart:    
+    - location: scripts/app_start.sh
+      runas: root
+      timeout: 300
+   
