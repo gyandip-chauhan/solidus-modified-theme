@@ -28,20 +28,20 @@
       <nav class="navbar navbar-light bg-light justify-content-between">
          <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="index.html">Home</a>
+            <a href="/">Home</a>
             <a href="products.html">Products</a>
             <a href="about.html">About</a>
             <a href="client.html">Client</a>
             <a href="contact.html">Contact</a>
          </div>
          <span class="toggle_icon" onclick="openNav()"><%= image_tag('toggle-icon.png') %></span>
-         <a class="logo" href="index.html"><%= image_tag('logo.png') %></a></a>
+         <a class="logo" href="/" style="display:flex;align-items:center; margin-top: 10px;margin-left: 10px;"><h3><b>SWORD STORE</b></h3><%#= image_tag('logo1.png') %></a>
          <form class="form-inline ">
             <div class="login_text">
                <ul>
-                  <li><a href="#"><%= image_tag('user-icon.png') %></a></li>
-                  <li><a href="#"><%= image_tag('bag-icon.png') %></a></li>
-                  <li><a href="#"><%= image_tag('search-icon.png') %></a></li>
+                  <li><a href="/account"><%= image_tag('user-icon.png') %></a></li>
+                  <li><a href="/cart/edit"><%= image_tag('bag-icon.png') %></a></li>
+                  <li><a href="/products"><%= image_tag('search-icon.png') %></a></li>
                </ul>
             </div>
          </form>
